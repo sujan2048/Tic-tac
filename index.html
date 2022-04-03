@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TiC Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="winbox">
+        <div class="box">
+        <h1 class="tied">
+            CONGRATULATIONS!
+        </h1>
+        <h2 class="winplayer">
+        </h2>
+        
+            <h3 class="again"> Play Again?</h3>
+        
+        </div>
+    </div>
+    <div class="game">
+        
+         <div class="top">
+        <div class="logo">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="1.5rem" height="1.5rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+            <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+       
+            <svg width="1.7rem" height="1.7rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+        </div>
+        <div class="turn">
+            <div class="turnouter1">
+                <div class="turninner">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="1rem" height="1rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                    <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>TURN
+                </div>
+            </div>
+            <div class="turnouter2">
+                <div class="turninner">
+                    <svg width="1rem" height="1rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>TURN
+                </div>
+            </div>
+           
+        </div>
+        <div class="reset">
+            <div class="resetbox">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M20,8 C18.5974037,5.04031171 15.536972,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 L12,21 C16.9705627,21 21,16.9705627 21,12 M21,3 L21,9 L15,9"/></svg>
+            </div>
+        </div>
+        </div>
+    
+        <div class="gameboard">
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        <div class="cells">
+            <div class="x"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="4rem" height="4rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="rgba(19, 209, 223, 0.781)" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg>
+           </div>
+            <div class="o">
+                <svg width="5rem" height="5rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="rgb(253, 195, 5)" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+            </div>
+        </div>
+        </div>
+        <div class="bottom">
+        <div class="player1">
+            <div class="you"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="0.8rem" height="0.8rem" viewBox="0 0 41.756 41.756" style="enable-background:new 0 0 41.756 41.756;" xml:space="preserve">
+                <path fill="black" d="M27.948,20.878L40.291,8.536c1.953-1.953,1.953-5.119,0-7.071c-1.951-1.952-5.119-1.952-7.07,0L20.878,13.809L8.535,1.465 c-1.951-1.952-5.119-1.952-7.07,0c-1.953,1.953-1.953,5.119,0,7.071l12.342,12.342L1.465,33.22c-1.953,1.953-1.953,5.119,0,7.071 C2.44,41.268,3.721,41.755,5,41.755c1.278,0,2.56-0.487,3.535-1.464l12.343-12.342l12.343,12.343 c0.976,0.977,2.256,1.464,3.535,1.464s2.56-0.487,3.535-1.464c1.953-1.953,1.953-5.119,0-7.071L27.948,20.878z"/></svg> (P1)</div>
+            <div class="playerscore">0</div>
+        </div>
+        <div class="ties">
+            <div class="tie">TIES</div>
+            <div class="tiescore">0</div>
+        </div>
+        <div class="cpus">
+            <div class="cpu"><svg width="1rem" height="1rem" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-record-circle-fill"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg> (P2)</div>
+            <div class="cpuscore">0</div>
+        </div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+  </body>
+</html>
